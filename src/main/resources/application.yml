@@ -1,0 +1,31 @@
+spring:
+  application:
+    name: Multi Datasource
+
+
+  datasource:
+
+    employee:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://localhost:3306/db1
+      username: root
+      password: pass123
+
+#    department:
+#      driver-class-name: com.mysql.cj.jdbc.Driver
+#      url: jdbc:mysql://localhost:3307/db2
+#      username: root
+#      password: pass123
+
+    department:
+      driver-class-name: org.postgresql.Driver
+      url: jdbc:postgresql://localhost:5430/db1
+      username: root
+      password: pass123
+
+  jpa:
+    show-sql: true
+    hibernate:
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+
